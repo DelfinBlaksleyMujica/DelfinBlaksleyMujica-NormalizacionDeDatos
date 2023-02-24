@@ -1,0 +1,36 @@
+<main>
+        <div class="container mt-3">
+            <div class="jumbotron">
+                <div class="table-responsive">
+                    <table class="table table-dark">
+                        <tr style="color: yellow">
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Descripción</th>
+                            <th>Stock</th>
+                            <th>Código</th>
+                            <th>Imagen</th>
+                        </tr>
+                        {{#if listExists}}
+                        {{#each productos}}
+                            <tr>
+                                <td>{{this.nombre}}</td>
+                                <td>{{this.precio}}</td>
+                                <td>{{this.descripcion}}</td>
+                                <td>{{this.stock}}</td>
+                                <td>{{this.codigoDeProducto}}</td>
+                                <td><img src="{{this.thumbnail}}" width="100" height="100" alt=""></td>
+                            </tr>
+                        {{/each}}
+                        {{else}} 
+                        <tr>
+                            <td></td>
+                            <td><h3 class="alert alert-danger">No hay productos</h3></td>
+                            <td></td>
+                        </tr>
+                        {{/if}}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>

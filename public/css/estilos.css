@@ -1,0 +1,25 @@
+body{
+    background-color: grey;
+}
+
+.colorDeFondoNav{
+    color:#212529 ;
+}
+
+
+.main__titulo__navbar{
+    color: black;
+}
+
+h1 {
+    color: white;
+}
+
+label {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.jumbotron {
+    min-height: 100vh;
+}
