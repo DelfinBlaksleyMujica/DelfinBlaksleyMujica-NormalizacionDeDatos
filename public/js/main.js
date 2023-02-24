@@ -5,9 +5,10 @@ const render = ( data ) => {
     const html = data.map(( element , index ) => {
         return`
                 <div>
-                <strong style="color:blue">${element.username}</strong>
-                <em style="color:brown">[${element.date}]:</em>
+                <strong style="color:blue">${element.author.username}</strong>
+                <em style="color:brown">[${element.timestamp}]:</em>
                 <em style="color:green">${element.text}</em>
+                <img src="${element.author.avatar}" alt="Avatar de usuario" width="50" height="50" >
                 </div>`;
     });
     document.getElementById("messages").innerHTML = html;
@@ -19,7 +20,7 @@ const renderProduct = ( data )=> {
         <tr>
         <td>${product.nombre}</td>
         <td>$${product.precio}</td>
-        <td><img src="${product.thumbnail}" width="100" height="100" alt=""></td>
+        <td><img src="${product.thumbnail}" width="100" height="100" alt="Imagen de producto"></td>
     </tr>`
     });
     document.getElementById("products").innerHTML = html;
@@ -28,13 +29,16 @@ const renderProduct = ( data )=> {
 
 function addMessage(e) {
     const mensaje= {
-        username: document.getElementById("username").value,
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        age: document.getElementById("age").value,
-        alias: document.getElementById("alias").value,
-        avatar: document.getElementById("avatar").value,
-        date: Date(),
+        author:
+        {
+            username: document.getElementById("username").value,
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value,
+            age: document.getElementById("age").value,
+            alias: document.getElementById("alias").value,
+            avatar: document.getElementById("avatar").value,
+        },
+        timestamp: Date(),
         text: document.getElementById("mensaje").value
     };
     socket.emit("new-message" , mensaje );

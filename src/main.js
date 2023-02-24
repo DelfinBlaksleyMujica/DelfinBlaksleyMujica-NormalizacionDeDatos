@@ -3,6 +3,7 @@ import { engine } from 'express-handlebars';
 
 
 import ProductosRouter from "./router/productosRouter.js";
+import ContenedorArchivo from "./contenedores/ContenedorArchivo.js"
 
 import { Server as HttpServer } from 'http'
 import { Server as Socket } from 'socket.io'
@@ -27,15 +28,21 @@ app.use("/api/productos" , productosApi )
 
 
 import ProductosDeBase from "../DB/productos.json" assert { type: "json" };
+import MensajesArchivo from "../DB/mensajes.json" assert { type: "json" };
+
 const productos = ProductosDeBase;
+const mensajesEnDB = MensajesArchivo[0].mensajes;
+
 
 
 /*
-const productosApi = new ContenedorArchivo( `${config.fileSystem.path}/productos.json` )
-const mensajesApi = new ContenedorArchivo( `${config.fileSystem.path}/mensajes.json` )
-*/
+const productosApi = new ContenedorArchivo( `${config.fileSystem.path}/productos.json` )*/
+const mensajesApi = new ContenedorArchivo( "../DB/mensajes.json" )
+
 //--------------------------------------------
 // NORMALIZACIÓN DE MENSAJES
+
+const originalData = MensajesArchivo;
 
 
 
@@ -48,10 +55,16 @@ const mensajesApi = new ContenedorArchivo( `${config.fileSystem.path}/mensajes.j
 // Definimos un esquema de posts
 
 
-const messages = []
+
+
+
 
 //--------------------------------------------
 // configuro el socket
+
+const messages = mensajesEnDB
+
+
 
 io.on("connection", async socket => {
     console.log('Nuevo cliente conectado!' + socket.id );
@@ -70,6 +83,7 @@ io.on("connection", async socket => {
     // actualizacion de mensajes
     socket.on("new-message" , (data) => {
         messages.push( data );
+        mensajesApi.guardarMensaje( data );
         io.sockets.emit("messages" , messages);
     })
 });

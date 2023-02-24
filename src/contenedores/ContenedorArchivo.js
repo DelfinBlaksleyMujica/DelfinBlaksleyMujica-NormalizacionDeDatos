@@ -42,6 +42,29 @@ class ContenedorArchivo {
         }
     }
 
+    async guardarMensaje( obj ) {
+        try {
+            const leer = await fs.readFile( this.ruta , "utf-8");
+            const data = JSON.parse( leer );
+            const mensajesEnDB = data[0].mensajes
+            let id;
+            mensajesEnDB.length === 0
+            ?
+            (id = 1)
+            :
+            (id = mensajesEnDB[ mensajesEnDB.length -1 ].id + 1);
+            const newElement = {...obj , id , timestamp: Date() };
+            mensajesEnDB.push(newElement)
+            await fs.writeFile( this.ruta , JSON.stringify( data , null , 2 ) , "utf-8");
+            console.log("Se agrego el item correctamente");
+            return newElement.id;
+        } catch (error) {
+            console.log(error);
+            return  error.message             
+        }
+    }
+    
+
     async actualizar(elem) {
         
     }
