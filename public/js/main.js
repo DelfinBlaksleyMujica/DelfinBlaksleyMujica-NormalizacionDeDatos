@@ -1,14 +1,35 @@
+//--------------------------------------------------
+//CONEXION CON PARA WEBSOCKETS
+
 const socket = io.connect();
 
+
+//-------------------------------------------------
+//Fetch de productos al endpoint
+let catalogo = [];
+
+async function fetchProductos() {
+    const respuesta = await fetch("/api/productos")
+    return await respuesta.json()
+}
+
+fetchProductos().then(productos => {
+    catalogo = productos
+    console.log(catalogo);
+})
+
+
+
+//--------------------------------------------------
+//Renders
 
 const render = ( data ) => {
     const html = data.map(( element , index ) => {
         return`
                 <div>
-                <strong style="color:blue">${element.author.username}</strong>
-                <em style="color:brown">[${element.timestamp}]:</em>
+                <strong style="color:blue">${element.author}</strong>
+                <em style="color:brown">${element.timestamp}:</em>
                 <em style="color:green">${element.text}</em>
-                <img src="${element.author.avatar}" alt="Avatar de usuario" width="50" height="50" >
                 </div>`;
     });
     document.getElementById("messages").innerHTML = html;
@@ -26,11 +47,32 @@ const renderProduct = ( data )=> {
     document.getElementById("products").innerHTML = html;
 };
 
+const renderCompressionNumber = ( data )=> {
+    const html = `${ data }`
+
+    document.getElementById("compresion-info").innerHTML = html;
+};
+
+const idRandomButton = document.getElementById("id-aleatorio");
+
+function generateRandomNumber() {
+    const numero = Math.floor(Math.random() * 100000);
+    return numero;
+}
+
+function insertarNumeroAleatorio() {
+    const numeroAleatorio = generateRandomNumber();
+    idRandomButton.innerHTML = numeroAleatorio;
+    return numeroAleatorio;
+}
+
+
 
 function addMessage(e) {
     const mensaje= {
         author:
-        {
+        {   
+            id: document.getElementById("username").value,
             username: document.getElementById("username").value,
             firstName: document.getElementById("firstName").value,
             lastName: document.getElementById("lastName").value,
@@ -70,6 +112,7 @@ function addProduct(e) {
 
 socket.on("products" , ( data ) => renderProduct( data ) );
 socket.on("messages" , (data) => render(data));
+socket.on("porcentajeDeCompresion" , ( data ) => renderCompressionNumber( data ) )
 
 
 

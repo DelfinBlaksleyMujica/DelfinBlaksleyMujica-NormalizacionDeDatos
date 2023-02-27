@@ -1,33 +1,128 @@
 [
   {
-    "Id": "mensajes",
-    "mensajes": [
-      {
-        "author": {
-          "username": "rgdfg",
-          "firstName": "fdgdfgd",
-          "lastName": "fgdfgd",
-          "age": "fgdfg",
-          "alias": "fgdfgd",
-          "avatar": "dfgdfgd"
-        },
-        "timestamp": "Fri Feb 24 2023 02:29:17 GMT-0300 (hora estándar de Argentina)",
-        "text": "dfgdfgd",
-        "id": 1
-      },
-      {
-        "author": {
-          "username": "hdghdfh",
-          "firstName": "gfhgfhfg",
-          "lastName": "hgfhgfhgf",
-          "age": "hgfhgfhfgh",
-          "alias": "fhfghfh",
-          "avatar": "gfhgfhfgh"
-        },
-        "timestamp": "Fri Feb 24 2023 02:29:30 GMT-0300 (hora estándar de Argentina)",
-        "text": "fghgfhf",
-        "id": 2
-      }
-    ]
+    "id": 1,
+    "author": {
+      "id": "tomasg@mail.com",
+      "username": "tomasg@mail.com",
+      "firstName": "Tomas",
+      "lastName": "Gonzalez",
+      "age": "22",
+      "alias": "Tomi",
+      "avatar": "https://tse1.mm.bing.net/th?id=OIP.wpqaU5nC43vmr8SsrVFkgQHaHP&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:36:25 GMT-0300 (hora estándar de Argentina)",
+    "text": "Hola como estan?"
+  },
+  {
+    "id": 2,
+    "author": {
+      "id": "tomasg@mail.com",
+      "username": "tomasg@mail.com",
+      "firstName": "Tomas",
+      "lastName": "Gonzalez",
+      "age": "22",
+      "alias": "Tomi",
+      "avatar": "https://tse1.mm.bing.net/th?id=OIP.wpqaU5nC43vmr8SsrVFkgQHaHP&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:37:28 GMT-0300 (hora estándar de Argentina)",
+    "text": "No hay nadie conectado?"
+  },
+  {
+    "id": 3,
+    "author": {
+      "id": "juanag@mail.com",
+      "username": "juanag@mail.com",
+      "firstName": "Juana",
+      "lastName": "Gomez",
+      "age": "45",
+      "alias": "Juana",
+      "avatar": "https://tse2.mm.bing.net/th?id=OIP.g6IJE3VzrJm6ScO62GQqpAHaEW&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:39:02 GMT-0300 (hora estándar de Argentina)",
+    "text": "Hola! Yo recien me despierto, como estas?"
+  },
+  {
+    "id": 4,
+    "author": {
+      "id": "tomasg@mail.com",
+      "username": "tomasg@mail.com",
+      "firstName": "Tomas",
+      "lastName": "Gonzalez",
+      "age": "22",
+      "alias": "Tomi",
+      "avatar": "https://tse1.mm.bing.net/th?id=OIP.wpqaU5nC43vmr8SsrVFkgQHaHP&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:40:02 GMT-0300 (hora estándar de Argentina)",
+    "text": "Al fin! Todo bien vos? Aparecera alguien mas?"
+  },
+  {
+    "id": 5,
+    "author": {
+      "id": "juanag@mail.com",
+      "username": "juanag@mail.com",
+      "firstName": "Juana",
+      "lastName": "Gomez",
+      "age": "45",
+      "alias": "Juana",
+      "avatar": "https://tse2.mm.bing.net/th?id=OIP.g6IJE3VzrJm6ScO62GQqpAHaEW&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:41:00 GMT-0300 (hora estándar de Argentina)",
+    "text": "Me alegro! Todo tranqui por suerte, seguramente alguno aparezca"
+  },
+  {
+    "id": 6,
+    "author": {
+      "id": "raulo@mail.com",
+      "username": "raulo@mail.com",
+      "firstName": "Raulo",
+      "lastName": "Fibonacci",
+      "age": "35",
+      "alias": "Rau",
+      "avatar": "https://tse4.mm.bing.net/th?id=OIP.8LGyt_n4bn1MVQ1FCh1NrwHaEK&pid=Api&P=0"
+    },
+    "timestamp": "Sun Feb 26 2023 20:41:58 GMT-0300 (hora estándar de Argentina)",
+    "text": "Hola! Acá estoy! Si quieren nos podemos juntar tipo 22hs en mi casa "
+  },
+  {
+    "id": 7,
+    "author": {
+      "id": "dblaksley@fi.uba.ar",
+      "username": "dblaksley@fi.uba.ar",
+      "firstName": "Delfin",
+      "lastName": "Blaksley Mujica",
+      "age": "27",
+      "alias": "Delf",
+      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFhYYGRgZGhoYGhgYGBgYGBoYGBgaGhgYGhocIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAIFAAEGB//EAD0QAAIBAgQDBgQFAgQGAwAAAAECAAMRBBIhMQVBUQYiYXGBkRMyobEUQsHR8GLhByRSchUzkqLC8RYjgv/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAAiEQACAgICAwADAQAAAAAAAAAAAQIREiEDMQRBUSJhcRP/2gAMAwEAAhEDEQA/AO+bDiAxCLYzdTFqBvKd+Kqbi8+chzci0kXmo3sq+KkAyt4Zwt69UohUFRnAYjUXFueu42heJ4gEmXHY5qleugOiUhmORAqnKO6HKgXa5B1vexnscEnSMsqs9Bw1BaFEKo7qKfM2uWPmTc+s4ntLjsO7K4+Mj65a1KzU3T/S+jKy37pRlzXUjLY5j3Vd8ovcDztv1138p5B2mwaJWZabimST3Hdkbe+YEMc4NhY3FwBpzmuL9j1eii407u5Cgo+UbnJ8RQSVORgXYm17EtsbdBUJiHX5GAJ/MoGfl+cAMBpsDrzE6D8FTYEvVo5QbtZatsx3GdHVXewF7Fmtbu8pX8Xp0EKCkzMmpzsW717cmUKLdBm/SHJN0Ni0rB4HjuJp2yVW05FQxte9s5Ge3gCN5vH8Zr1rBwO6b3U1Ab237zn7CKmrtpYfU+hmI94cUFNkRna259vXXcx2jh3bRgeugFxMw1ybKPb99zLPDUiN7X6fMfa8FhUbK04C3K4vrYEfflLbDYTLkCtut25anU+o0j9KnprqeXh1P"
+    },
+    "timestamp": "Sun Feb 26 2023 23:33:17 GMT-0300 (hora estándar de Argentina)",
+    "text": "Hola"
+  },
+  {
+    "id": 8,
+    "author": {
+      "id": "dblaksley@fi.uba.ar",
+      "username": "dblaksley@fi.uba.ar",
+      "firstName": "Delfin",
+      "lastName": "Blaksley Mujica",
+      "age": "27",
+      "alias": "Delf",
+      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFhYYGRgZGhoYGhgYGBgYGBoYGBgaGhgYGhocIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAIFAAEGB//EAD0QAAIBAgQDBgQFAgQGAwAAAAECAAMRBBIhMQVBUQYiYXGBkRMyobEUQsHR8GLhByRSchUzkqLC8RYjgv/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAAiEQACAgICAwADAQAAAAAAAAAAAQIREiEDMQRBUSJhcRP/2gAMAwEAAhEDEQA/AO+bDiAxCLYzdTFqBvKd+Kqbi8+chzci0kXmo3sq+KkAyt4Zwt69UohUFRnAYjUXFueu42heJ4gEmXHY5qleugOiUhmORAqnKO6HKgXa5B1vexnscEnSMsqs9Bw1BaFEKo7qKfM2uWPmTc+s4ntLjsO7K4+Mj65a1KzU3T/S+jKy37pRlzXUjLY5j3Vd8ovcDztv1138p5B2mwaJWZabimST3Hdkbe+YEMc4NhY3FwBpzmuL9j1eii407u5Cgo+UbnJ8RQSVORgXYm17EtsbdBUJiHX5GAJ/MoGfl+cAMBpsDrzE6D8FTYEvVo5QbtZatsx3GdHVXewF7Fmtbu8pX8Xp0EKCkzMmpzsW717cmUKLdBm/SHJN0Ni0rB4HjuJp2yVW05FQxte9s5Ge3gCN5vH8Zr1rBwO6b3U1Ab237zn7CKmrtpYfU+hmI94cUFNkRna259vXXcx2jh3bRgeugFxMw1ybKPb99zLPDUiN7X6fMfa8FhUbK04C3K4vrYEfflLbDYTLkCtut25anU+o0j9KnprqeXh1P"
+    },
+    "timestamp": "Sun Feb 26 2023 23:37:29 GMT-0300 (hora estándar de Argentina)",
+    "text": "Como andan?"
+  },
+  {
+    "id": 9,
+    "author": {
+      "id": "dblaksley@fi.uba.ar",
+      "username": "dblaksley@fi.uba.ar",
+      "firstName": "Delfin",
+      "lastName": "Blaksley Mujica",
+      "age": "27",
+      "alias": "Delf",
+      "avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgWFhYYGRgZGhoYGhgYGBgYGBoYGBgaGhgYGhocIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJCQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBAIFAAEGB//EAD0QAAIBAgQDBgQFAgQGAwAAAAECAAMRBBIhMQVBUQYiYXGBkRMyobEUQsHR8GLhByRSchUzkqLC8RYjgv/EABoBAAMBAQEBAAAAAAAAAAAAAAECAwQABQb/xAAiEQACAgICAwADAQAAAAAAAAAAAQIREiEDMQRBUSJhcRP/2gAMAwEAAhEDEQA/AO+bDiAxCLYzdTFqBvKd+Kqbi8+chzci0kXmo3sq+KkAyt4Zwt69UohUFRnAYjUXFueu42heJ4gEmXHY5qleugOiUhmORAqnKO6HKgXa5B1vexnscEnSMsqs9Bw1BaFEKo7qKfM2uWPmTc+s4ntLjsO7K4+Mj65a1KzU3T/S+jKy37pRlzXUjLY5j3Vd8ovcDztv1138p5B2mwaJWZabimST3Hdkbe+YEMc4NhY3FwBpzmuL9j1eii407u5Cgo+UbnJ8RQSVORgXYm17EtsbdBUJiHX5GAJ/MoGfl+cAMBpsDrzE6D8FTYEvVo5QbtZatsx3GdHVXewF7Fmtbu8pX8Xp0EKCkzMmpzsW717cmUKLdBm/SHJN0Ni0rB4HjuJp2yVW05FQxte9s5Ge3gCN5vH8Zr1rBwO6b3U1Ab237zn7CKmrtpYfU+hmI94cUFNkRna259vXXcx2jh3bRgeugFxMw1ybKPb99zLPDUiN7X6fMfa8FhUbK04C3K4vrYEfflLbDYTLkCtut25anU+o0j9KnprqeXh1P"
+    },
+    "timestamp": "Mon Feb 27 2023 00:00:57 GMT-0300 (hora estándar de Argentina)",
+    "text": "No hay nadie?"
   }
 ]
